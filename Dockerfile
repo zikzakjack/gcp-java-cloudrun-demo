@@ -4,4 +4,4 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 COPY /target/gcp-java-cloudrun-demo-app.jar /gcp-java-cloudrun-demo-app.jar
-CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/uba-dataops-app.jar", "--spring.profiles.active=${ZZJ_ENV}"]
+CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/gcp-java-cloudrun-demo-app.jar", "--spring.profiles.active=${ZZJ_ENV}"]
